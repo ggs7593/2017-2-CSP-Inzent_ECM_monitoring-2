@@ -6,19 +6,17 @@
 	<script src="mpld3.v0.1.js"></script>
 	<script>
 		$(document).ready(function() {
-			$("body").append("jj");
-			$.get('mpld3.cgi', function(data, status) {
-				alert(status);
-				alert(data);
-				var json = eval(data);
-				mpld3.draw_figure('1', json);
+			$.get('inzent.cgi', function(data, status) {
+				$('#1').html(data);
 			});
+			$('#2').load('m.cgi');
 		});
 	</script>
 
 	</head>
 	<body>
+	DIV1
 		<div id="1"></div>
-
+		DIV2<div id="2"></div>
 	</body>
 </html>
