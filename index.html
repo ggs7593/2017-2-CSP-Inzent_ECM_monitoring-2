@@ -6,17 +6,22 @@
 	<script src="mpld3.v0.1.js"></script>
 	<script>
 		$(document).ready(function() {
-			$.get('inzent.cgi', function(data, status) {
+			var jv1 = {sy : 2016, sm : 9, sd : 0, ey : 2017, em : 2, ed : 0, 
+				file : "1.xlsx"};
+			$.post('inzent.cgi', jv1, function(data, status) {
 				$('#1').html(data);
 			});
-			$('#2').load('m.cgi');
+			var jv2 = {sy : 2016, sm : 9, sd : 1, ey : 2016, em : 9, ed : 30,
+				file : "2.xlsx"};
+			$.post('inzent.cgi', jv2, function(data, status) {
+				$('#2').html(data);
+			});
 		});
 	</script>
 
 	</head>
 	<body>
-	DIV1
 		<div id="1"></div>
-		DIV2<div id="2"></div>
+		<div id="2"></div>
 	</body>
 </html>
