@@ -6,12 +6,12 @@
 	<script src="mpld3.v0.1.js"></script>
 	<script>
 		$(document).ready(function() {
-			var jv1 = {sy : 2016, sm : 9, sd : 0, ey : 2017, em : 2, ed : 0, 
-				file : "1.xlsx"};
+			var jv1 = {sy : 2017, sm : 9, sd : 0, ey : 2017, em : 9, ed : 0, 
+				file : ""};
 			$.post('inzent.cgi', jv1, function(data, status) {
 				$('#1').html(data);
 			});
-			var jv2 = {sy : 2016, sm : 9, sd : 1, ey : 2016, em : 9, ed : 30,
+			var jv2 = {sy : 2012, sm : 9, sd : 0, ey : 2017, em : 9, ed : 0,
 				file : "2.xlsx"};
 			$.post('inzent.cgi', jv2, function(data, status) {
 				$('#2').html(data);

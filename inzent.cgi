@@ -50,7 +50,7 @@ else:
     df[1].plot(x='date', ax=ax, kind=kind)
     df[2].plot(x='date', ax=ax, kind=kind)
 
-#if fn: df[0].to_excel(fn)
+if fn: df[0].to_excel('file/'+fn)
 
 fig = ax.get_figure()
 print 'Content-type:text/html;\r\n\r\n'
